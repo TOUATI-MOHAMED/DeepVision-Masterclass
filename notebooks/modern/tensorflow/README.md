@@ -1,6 +1,6 @@
 # TensorFlow / Keras track
 
-**Independent framework environment:** TensorFlow 2.21.0 baseline, Keras 3 API. Install TensorFlow in its own environment. These notebooks do not import PyTorch.
+**Independent framework environment:** TensorFlow 2.21.0 / Keras 3 on supported platforms. On Intel macOS, the official TensorFlow compatibility table lists 2.16.2 as the last supported release; use that version there. Install TensorFlow in its own environment. These notebooks do not import PyTorch.
 
 | Lesson | Notebook | Dataset |
 |---|---|---|
@@ -15,9 +15,11 @@ python -m venv .venv-tf
 # activate environment, then:
 python -m pip install --upgrade pip
 python -m pip install "tensorflow==2.21.0" jupyterlab matplotlib numpy scikit-learn pillow
+# Intel macOS: use the supported 2.16.2 build instead
+# python -m pip install "tensorflow==2.16.2" jupyterlab matplotlib numpy scikit-learn pillow
 ```
 Check official TensorFlow install compatibility for your OS, Python and accelerator before installing. If this pinned baseline is unavailable on your platform, use the current supported release and record `tf.__version__`.
 
 Start from repository root: `jupyter lab`.
 
-All notebook cells are authored for modern TensorFlow/Keras APIs. Training has not been executed as part of this repository change.
+[TensorFlow exercise solutions](solutions/Exercise_Solutions_TensorFlow.ipynb) are separate from the lessons. All notebook cells are authored for modern TensorFlow/Keras APIs. Training has not been executed as part of this repository change.
