@@ -31,3 +31,13 @@ The original notebooks remain unchanged in the repository root. This index numbe
 - Other original notebooks: version not yet verified in this audit. Their files were too large for complete content retrieval through the GitHub connector; do not assume they used the same release.
 
 The original code can still be useful for studying historical APIs. In particular, `ImageDataGenerator`, `fit_generator`, legacy HDF5/JSON model saving and older Colab path assumptions should be treated as legacy examples, not the recommended modern workflow.
+
+## Annotated copies for the first three audited lessons
+
+These copies insert explanations while preserving the original code cells. The Colab badge at the top points back to the unchanged original notebook.
+
+- [O00 — CNN Homer/Bart, TensorFlow 2.4.0 annotated](annotated/O00_CNN_Homer_Bart_TensorFlow_2_4_0_Annotated.ipynb)
+- [O01 — ResNet50 transfer learning, TensorFlow 2.4.0 annotated](annotated/O01_Transfer_Learning_ResNet50_TensorFlow_2_4_0_Annotated.ipynb)
+- [O02 — Autoencoders, TensorFlow 2.4.1 annotated](annotated/O02_Autoencoders_TensorFlow_2_4_1_Annotated.ipynb)
+
+The other seven originals are indexed but not fully annotated yet because their large notebook payloads could not be retrieved completely through the GitHub file interface.
