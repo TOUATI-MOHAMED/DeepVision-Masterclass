@@ -1,45 +1,37 @@
 # DeepVision Masterclass
 
-A notebook-first computer vision teaching repository. The original notebooks remain intact in the repository root. The **Modern Series** adds updated, reproducible examples using current TensorFlow/Keras and PyTorch APIs.
+Notebook-first educational repository for computer vision, image processing and deep learning. Original Google Colab notebooks are preserved, with separate modern TensorFlow/Keras and PyTorch learning tracks.
 
-## Modern computer vision series
+## Start here
 
-Start here: [Modern series index](notebooks/modern/README.md).
+- **[Modern curriculum](notebooks/modern/README.md)** — framework-separated lessons and solutions
+- [TensorFlow/Keras track](notebooks/modern/tensorflow/README.md)
+- [PyTorch track](notebooks/modern/pytorch/README.md)
+- [Original Colab notebooks](notebooks/original_colab/README.md)
+- [Dataset and asset inventory](docs/DATASETS_AND_ASSETS.md)
+- [Image understanding and preprocessing guide](docs/IMAGE_DATA_UNDERSTANDING_AND_PREPROCESSING.md)
+- [TensorFlow version audit](docs/TENSORFLOW_VERSION_AUDIT.md)
 
-| Notebook | Topic | Framework |
-|---|---|---|
-| [00 — TensorFlow + PyTorch comparison](notebooks/modern/Modern_Deep_Learning_Computer_Vision_TensorFlow_PyTorch.ipynb) | Comparable CNN classifiers, metrics and confusion matrices | TensorFlow + PyTorch |
-| [01 — CNN image classification](notebooks/modern/01_CNN_Image_Classification_CIFAR10_PyTorch.ipynb) | CIFAR-10, CNN, training loop, evaluation and checkpoint | PyTorch |
-| [02 — Augmentation and regularization](notebooks/modern/02_Data_Augmentation_and_Regularization.ipynb) | Augmentation, dropout, weight decay, mixup | PyTorch + Keras |
-| [03 — Transfer learning](notebooks/modern/03_Transfer_Learning_ResNet50_TensorFlow_PyTorch.ipynb) | ResNet50 feature extraction and fine-tuning | TensorFlow + PyTorch |
-| [04 — Autoencoders](notebooks/modern/04_Autoencoders_Image_Compression_TensorFlow_PyTorch.ipynb) | Dense and convolutional autoencoders | TensorFlow + PyTorch |
-| [05 — GANs](notebooks/modern/05_GANs_DC_GAN_MNIST_PyTorch.ipynb) | DCGAN on MNIST | PyTorch |
-| [06 — Object detection](notebooks/modern/06_Object_Detection_Torchvision_FasterRCNN.ipynb) | Faster R-CNN, boxes, labels and custom dataset contract | PyTorch |
-| [07 — Semantic segmentation](notebooks/modern/07_Semantic_Segmentation_U_Net_PyTorch.ipynb) | U-Net, masks, Dice and IoU | PyTorch + Keras guidance |
-| [08 — Vision Transformers](notebooks/modern/08_Vision_Transformers_Transfer_Learning.ipynb) | ViT-B/16 transfer learning and patch tokens | PyTorch |
+## Why separate frameworks?
 
-## Getting started
+TensorFlow/Keras and PyTorch are taught in independent notebooks and environments. This avoids dependency conflicts and helps learners understand each framework's native data pipeline, model API, training loop and checkpoint conventions.
 
-1. Create a clean Python environment (Python 3.10 or 3.11 recommended; check framework support for your platform).
-2. Install a matching PyTorch/torchvision build for your CPU/CUDA/ROCm setup using the [official PyTorch selector](https://pytorch.org/get-started/locally/).
-3. Install TensorFlow separately if you plan to run the TensorFlow notebooks, following the [official TensorFlow installation guide](https://www.tensorflow.org/install).
-4. Install notebook and evaluation dependencies: `python -m pip install jupyterlab numpy matplotlib scikit-learn pillow scikit-image`.
-5. Launch JupyterLab from the repository root: `jupyter lab`.
+## Historical and modern material
 
-Framework packages are deliberately not pinned to speculative future versions. Use the official install selectors for a compatible combination of Python, OS, accelerator and framework release.
+Original notebooks remain in the repository root with their Colab badges. Their old TensorFlow outputs are documented in the version audit. Modern notebooks are new companions; they are not presented as exact reproductions of every original experiment.
 
-## Original material and audit status
+## Dataset policy
 
-The original notebooks are preserved and are not overwritten. See [the original notebook audit](docs/ORIGINAL_NOTEBOOK_AUDIT.md) for what was inspected and what still requires a complete cell-by-cell review. Large notebooks with embedded outputs/assets may exceed the GitHub content retrieval limit; this is stated rather than treating them as reviewed.
+The original Homer/Bart notebook references `Datasets/homer_bart_2.zip` in Google Drive. This ZIP is not included in the repository. Public benchmark datasets (MNIST, Fashion-MNIST, CIFAR-10) are downloaded by framework utilities. Read [dataset provenance and setup](docs/DATASETS_AND_ASSETS.md) before running experiments.
 
-## Datasets and responsible use
+## Installation
 
-- MNIST and CIFAR-10 are loaded through Keras/torchvision dataset utilities.
-- Object detection and segmentation notebooks define dataset interfaces; users must supply correctly annotated, licensed datasets.
-- Homer/Bart data referenced by the legacy notebooks may have been stored in private Google Drive locations. Do not assume a public archive is identical or redistributable; verify provenance, contents and license.
-- Never commit private datasets, personal images/videos, model weights or credentials without permission.
-- This modernization does not change the repository's existing license or the licenses of third-party datasets and pretrained weights.
+Use a separate virtual environment for each framework. Follow the installation instructions in the TensorFlow and PyTorch track READMEs. Select a framework build compatible with your Python version, operating system and accelerator.
 
 ## Validation
 
-Notebook JSON and code syntax should be checked before execution. Full training, accelerator compatibility, remote dataset downloads and end-to-end metric reproduction are not claimed unless explicitly recorded in the validation notes. See [validation and limitations](docs/VALIDATION_AND_LIMITATIONS.md).
+Notebook JSON structure has been checked. Full end-to-end execution, GPU compatibility, dataset downloads and training results are not claimed until run and recorded. See the documentation for audit scope and limitations.
+
+## License and attribution
+
+Respect the licenses of the original material, datasets, pretrained weights and third-party libraries. Do not redistribute archives unless their licenses explicitly permit it.
