@@ -28,7 +28,10 @@ The modern curriculum is deliberately separated into independent framework track
 
 ## Exercises and solutions
 
-Solutions are maintained in separate numbered folders, not embedded in the teaching notebooks. The existing first-generation mixed-framework series remains for historical continuity during this migration; it is not the recommended new learning path.
+- [TensorFlow solutions](tensorflow/solutions/Exercise_Solutions_TensorFlow.ipynb)
+- [PyTorch solutions](pytorch/solutions/Exercise_Solutions_PyTorch.ipynb)
+
+Solutions are maintained separately from the teaching notebooks. The first-generation mixed-framework series remains for historical continuity; the new separate tracks are the recommended learning path.
 
 ## Data and reading material
 
