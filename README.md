@@ -1,42 +1,45 @@
-DeepVision-Masterclass — PyTorch Edition
-A reproducible, notebook-first modern companion to the original DeepVision-Masterclass repository. The original TensorFlow/OpenCV notebooks remain available as a legacy edition; this package adds PyTorch implementations and supporting documentation.
-What's included
-New notebook	Contents
-01_Image_Classification_MLP_CNN_and_Feature_Engineering_PyTorch.ipynb	Pixel MLP baseline, original six colour descriptors, CNN, metrics and checkpoints
-02_Transfer_Learning_and_Fine_Tuning_ResNet50_PyTorch.ipynb	Pretrained ResNet50, frozen feature extractor, fine-tuning and evaluation
-03_Deep_Convolutional_GAN_MNIST_PyTorch.ipynb	DCGAN on MNIST with PyTorch
-04_Human_Pose_and_Action_Recognition_KeypointRCNN_LSTM_PyTorch.ipynb	COCO Keypoint R-CNN pose inference and an LSTM template for labelled sequences
-05_OpenCV_Fundamentals_and_PyTorch_Interop.ipynb	New OpenCV companion and tensor conversion examples
+# DeepVision Masterclass
 
+A notebook-first computer vision teaching repository. The original notebooks remain intact in the repository root. The **Modern Series** adds updated, reproducible examples using current TensorFlow/Keras and PyTorch APIs.
 
-Quick start
-1. Keep the five original notebooks unchanged (or optionally copy them to notebooks/legacy/).
-2. Install PyTorch and torchvision as a matching pair for your hardware using the official PyTorch selector. The current target family is PyTorch 2.14.0 / torchvision 0.29.0 (released September 2026); see the release announcement.
-3. Install the other dependencies:
-python -m pip install -r requirements.txt
-4. Run from the repository root:
-jupyter lab
-5. Read docs/DATASETS_AND_ASSETS.md before running Homer/Bart or pose experiments.
-Dataset status
-- MNIST: automatically downloaded by torchvision in notebook 03.
-- Homer/Bart archive 1: original private Drive path found; exact public source not verified.
-- Homer/Bart archive 2: strong matching Kaggle candidate identified (aasousa/images-simpsons) because the folder structure, class mapping and reported counts match the original notebook output. Verify license and archive contents before use.
-- Pose image / video: original private sample is missing; supply a permitted image/video.
-- MPI/OpenPose Caffe assets: original .prototxt and .caffemodel are not in the repository. Notebook 04 uses torchvision Keypoint R-CNN (17 COCO keypoints), a replacement rather than an MPI port (15 points).
-- Action sequences: no labelled temporal action dataset was found; the LSTM is a template, not a trained action model.
-See docs/ORIGINAL_NOTEBOOK_AUDIT.md and docs/DATASETS_AND_ASSETS.md for precise details.
-Important limitation
-The original openCVTutorial_Basics.ipynb raw file is 18.4 MB and could not be retrieved cell-by-cell during this audit. Notebook 05 is a new companion, not a claimed line-by-line conversion. The new notebooks pass structure and code syntax checks; not all model training or external downloads were executed. See docs/VALIDATION_AND_LIMITATIONS.md.
-Repository structure
-DeepVision-Masterclass/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── docs/
-├── notebooks/pytorch/
-├── notebooks/legacy/       # optional; original root notebooks can remain in place
-├── scripts/
-├── data/                   # local datasets; ignored by Git
-└── checkpoints/             # local weights; ignored by Git
-License and responsible use
-This package does not change the license of the original repository. Review the repository license and each dataset/model license before redistribution. Do not commit personal photos/videos, private Drive archives, third-party images, or model weights unless you have rights to do so.
+## Modern computer vision series
+
+Start here: [Modern series index](notebooks/modern/README.md).
+
+| Notebook | Topic | Framework |
+|---|---|---|
+| [00 — TensorFlow + PyTorch comparison](notebooks/modern/Modern_Deep_Learning_Computer_Vision_TensorFlow_PyTorch.ipynb) | Comparable CNN classifiers, metrics and confusion matrices | TensorFlow + PyTorch |
+| [01 — CNN image classification](notebooks/modern/01_CNN_Image_Classification_CIFAR10_PyTorch.ipynb) | CIFAR-10, CNN, training loop, evaluation and checkpoint | PyTorch |
+| [02 — Augmentation and regularization](notebooks/modern/02_Data_Augmentation_and_Regularization.ipynb) | Augmentation, dropout, weight decay, mixup | PyTorch + Keras |
+| [03 — Transfer learning](notebooks/modern/03_Transfer_Learning_ResNet50_TensorFlow_PyTorch.ipynb) | ResNet50 feature extraction and fine-tuning | TensorFlow + PyTorch |
+| [04 — Autoencoders](notebooks/modern/04_Autoencoders_Image_Compression_TensorFlow_PyTorch.ipynb) | Dense and convolutional autoencoders | TensorFlow + PyTorch |
+| [05 — GANs](notebooks/modern/05_GANs_DC_GAN_MNIST_PyTorch.ipynb) | DCGAN on MNIST | PyTorch |
+| [06 — Object detection](notebooks/modern/06_Object_Detection_Torchvision_FasterRCNN.ipynb) | Faster R-CNN, boxes, labels and custom dataset contract | PyTorch |
+| [07 — Semantic segmentation](notebooks/modern/07_Semantic_Segmentation_U_Net_PyTorch.ipynb) | U-Net, masks, Dice and IoU | PyTorch + Keras guidance |
+| [08 — Vision Transformers](notebooks/modern/08_Vision_Transformers_Transfer_Learning.ipynb) | ViT-B/16 transfer learning and patch tokens | PyTorch |
+
+## Getting started
+
+1. Create a clean Python environment (Python 3.10 or 3.11 recommended; check framework support for your platform).
+2. Install a matching PyTorch/torchvision build for your CPU/CUDA/ROCm setup using the [official PyTorch selector](https://pytorch.org/get-started/locally/).
+3. Install TensorFlow separately if you plan to run the TensorFlow notebooks, following the [official TensorFlow installation guide](https://www.tensorflow.org/install).
+4. Install notebook and evaluation dependencies: `python -m pip install jupyterlab numpy matplotlib scikit-learn pillow scikit-image`.
+5. Launch JupyterLab from the repository root: `jupyter lab`.
+
+Framework packages are deliberately not pinned to speculative future versions. Use the official install selectors for a compatible combination of Python, OS, accelerator and framework release.
+
+## Original material and audit status
+
+The original notebooks are preserved and are not overwritten. See [the original notebook audit](docs/ORIGINAL_NOTEBOOK_AUDIT.md) for what was inspected and what still requires a complete cell-by-cell review. Large notebooks with embedded outputs/assets may exceed the GitHub content retrieval limit; this is stated rather than treating them as reviewed.
+
+## Datasets and responsible use
+
+- MNIST and CIFAR-10 are loaded through Keras/torchvision dataset utilities.
+- Object detection and segmentation notebooks define dataset interfaces; users must supply correctly annotated, licensed datasets.
+- Homer/Bart data referenced by the legacy notebooks may have been stored in private Google Drive locations. Do not assume a public archive is identical or redistributable; verify provenance, contents and license.
+- Never commit private datasets, personal images/videos, model weights or credentials without permission.
+- This modernization does not change the repository's existing license or the licenses of third-party datasets and pretrained weights.
+
+## Validation
+
+Notebook JSON and code syntax should be checked before execution. Full training, accelerator compatibility, remote dataset downloads and end-to-end metric reproduction are not claimed unless explicitly recorded in the validation notes. See [validation and limitations](docs/VALIDATION_AND_LIMITATIONS.md).
