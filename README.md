@@ -40,3 +40,11 @@ DeepVision-Masterclass/
 └── checkpoints/             # local weights; ignored by Git
 License and responsible use
 This package does not change the license of the original repository. Review the repository license and each dataset/model license before redistribution. Do not commit personal photos/videos, private Drive archives, third-party images, or model weights unless you have rights to do so.
+
+## Modern TensorFlow + PyTorch comparison
+
+A new dual-framework notebook is available at:
+
+- [Modern_Deep_Learning_Computer_Vision_TensorFlow_PyTorch.ipynb](notebooks/modern/Modern_Deep_Learning_Computer_Vision_TensorFlow_PyTorch.ipynb)
+
+It trains comparable CNN classifiers on the same MNIST split using TensorFlow/Keras and PyTorch, then compares learning curves, test accuracy, macro precision/recall/F1, confusion matrices, and training time. It also includes optional TensorFlow and torchvision image-folder loaders for a locally prepared Homer/Bart dataset. The notebook records runtime framework versions instead of pinning framework wheels; install compatible builds for your OS and accelerator using the official TensorFlow and PyTorch installation guides. This is an educational comparison, not a universal speed benchmark.
