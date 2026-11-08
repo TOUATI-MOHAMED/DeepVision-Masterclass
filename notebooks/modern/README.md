@@ -36,3 +36,21 @@ This directory contains the updated companion curriculum. Each lesson is designe
 ## Pedagogical and research standards
 
 Use a validation set for model selection and keep the test set untouched until final evaluation. Report macro-F1/per-class metrics for imbalanced classification; mAP for detection; Dice/IoU for segmentation. Compare models under identical splits and compute budgets. Do not present example epochs or unexecuted cells as achieved experimental results.
+
+## Exercise solutions
+
+Each numbered lesson has a separate solutions notebook in its own numbered folder. Keep solutions separate from the teaching notebook so learners can attempt exercises independently.
+
+| Lesson | Solutions notebook |
+|---|---|
+| 00 — TensorFlow + PyTorch comparison | [Exercise solutions](solutions/00_00_tensorflow_pytorch/Exercise_Solutions.ipynb) |
+| 01 — CNN image classification | [Exercise solutions](solutions/01_01_cnn_classification/Exercise_Solutions.ipynb) |
+| 02 — Augmentation and regularization | [Exercise solutions](solutions/02_02_augmentation/Exercise_Solutions.ipynb) |
+| 03 — Transfer learning | [Exercise solutions](solutions/03_03_transfer_learning/Exercise_Solutions.ipynb) |
+| 04 — Autoencoders | [Exercise solutions](solutions/04_04_autoencoders/Exercise_Solutions.ipynb) |
+| 05 — GANs | [Exercise solutions](solutions/05_05_gans/Exercise_Solutions.ipynb) |
+| 06 — Object detection | [Exercise solutions](solutions/06_06_object_detection/Exercise_Solutions.ipynb) |
+| 07 — Semantic segmentation | [Exercise solutions](solutions/07_07_segmentation/Exercise_Solutions.ipynb) |
+| 08 — Vision Transformers | [Exercise solutions](solutions/08_08_vit/Exercise_Solutions.ipynb) |
+
+Solutions provide reference implementations, reasoning and evaluation guidance. Dataset-specific training and measured performance remain learner tasks where data or hardware is not bundled.
