@@ -4,10 +4,12 @@ Notebook-first educational repository for computer vision, image processing and 
 
 ## Start here
 
+> **Framework policy:** New modern lessons are separated into TensorFlow/Keras and PyTorch tracks. Use separate virtual environments; do not combine both frameworks in the same lesson notebook.
+
 - **[Modern curriculum](notebooks/modern/README.md)** — framework-separated lessons and solutions
-- [TensorFlow/Keras track](notebooks/modern/tensorflow/README.md)
-- [PyTorch track](notebooks/modern/pytorch/README.md)
-- [Original Colab notebooks](notebooks/original_colab/README.md)
+- [TensorFlow/Keras track](notebooks/modern/tensorflow/README.md) and [solutions](notebooks/modern/tensorflow/solutions/Exercise_Solutions_TensorFlow.ipynb)
+- [PyTorch track](notebooks/modern/pytorch/README.md) and [solutions](notebooks/modern/pytorch/solutions/Exercise_Solutions_PyTorch.ipynb)
+- [Original Colab notebooks](notebooks/original_colab/README.md) and [annotated copies](notebooks/original_colab/annotated/)
 - [Dataset and asset inventory](docs/DATASETS_AND_ASSETS.md)
 - [Image understanding and preprocessing guide](docs/IMAGE_DATA_UNDERSTANDING_AND_PREPROCESSING.md)
 - [TensorFlow version audit](docs/TENSORFLOW_VERSION_AUDIT.md)
