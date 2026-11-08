@@ -13,7 +13,11 @@ These are historical runtime outputs stored inside the notebooks. They are not i
 
 ## Modern edition target
 
-The new TensorFlow track declares TensorFlow **2.21.0 / Keras 3** as its baseline. Check the official installation guide and the Python/platform compatibility matrix before installation. If a particular machine cannot install this version, install a currently supported compatible version and record the exact `tf.__version__`.
+The new TensorFlow track declares TensorFlow **2.21.0 / Keras 3** as its baseline on supported platforms. The official installation matrix lists Python 3.10–3.13 for TensorFlow 2.21.0 and notes that **2.16.2 was the last TensorFlow release supporting Intel macOS (x86_64)**. On Intel Mac use TensorFlow 2.16.2; on Apple Silicon, TensorFlow 2.21.0 wheels are listed for arm64. Verify the current platform matrix before installation and record the exact `tf.__version__`.
+
+Official references:
+- [TensorFlow pip installation and platform/Python matrix](https://www.tensorflow.org/install/pip)
+- [TensorFlow tested build configurations](https://www.tensorflow.org/install/source)
 
 Each TensorFlow lesson prints its installed framework version at runtime. This avoids implying that a notebook's target version is the version installed on every learner's machine.
 
