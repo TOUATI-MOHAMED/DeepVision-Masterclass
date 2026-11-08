@@ -13,4 +13,4 @@ Install PyTorch and torchvision using the official selector for your CPU/CUDA/RO
 
 Then install: `python -m pip install jupyterlab matplotlib numpy scikit-learn pillow`.
 
-Start from repository root: `jupyter lab`. Training has not been executed as part of this repository change.
+Start from repository root: `jupyter lab`. [PyTorch exercise solutions](solutions/Exercise_Solutions_PyTorch.ipynb) are separate from the lessons. Training has not been executed as part of this repository change.
