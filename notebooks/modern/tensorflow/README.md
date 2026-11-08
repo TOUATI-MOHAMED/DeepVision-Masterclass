@@ -4,10 +4,10 @@
 
 | Lesson | Notebook | Dataset |
 |---|---|---|
-| 00 | [CNN image classification — Homer/Bart](00_CNN_Image_Classification_Homer_Bart_TensorFlow.ipynb) | External `Datasets/homer_bart_2.zip` |
-| 01 | [ResNet50 transfer learning](01_Transfer_Learning_ResNet50_TensorFlow.ipynb) | Homer/Bart folder dataset |
-| 02 | [Autoencoders](02_Autoencoders_MNIST_FashionMNIST_TensorFlow.ipynb) | MNIST, Fashion-MNIST |
-| 03 | [DCGAN](03_DC_GAN_MNIST_TensorFlow.ipynb) | MNIST |
+| 00 | [CNN image classification — Homer/Bart](00_CNN_Image_Classification_Homer_Bart_TensorFlow.ipynb) · [solutions](solutions/00_CNN_Homer_Bart_Solutions.ipynb) | External `Datasets/homer_bart_2.zip` |
+| 01 | [ResNet50 transfer learning](01_Transfer_Learning_ResNet50_TensorFlow.ipynb) · [solutions](solutions/01_ResNet50_Solutions.ipynb) | Homer/Bart folder dataset |
+| 02 | [Autoencoders](02_Autoencoders_MNIST_FashionMNIST_TensorFlow.ipynb) · [solutions](solutions/02_Autoencoders_Solutions.ipynb) | MNIST, Fashion-MNIST |
+| 03 | [DCGAN](03_DC_GAN_MNIST_TensorFlow.ipynb) · [solutions](solutions/03_DCGAN_Solutions.ipynb) | MNIST |
 
 Install:
 ```bash
